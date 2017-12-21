@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Amanda_Pagamento>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends><Mage_Payment/></depends>
+        </Amanda_Pagamento>
+    </modules>
+</config>

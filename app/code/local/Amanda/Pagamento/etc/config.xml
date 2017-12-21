@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Amanda_Pagamento>
+            <version>0.0.1</version>
+        </Amanda_Pagamento>
+    </modules>
+
+    <global>
+        <fieldsets>
+            <sales_convert_quote_payment>
+                <campo_cpf>
+                    <to_order_payment>*</to_order_payment>
+                </campo_cpf>
+            </sales_convert_quote_payment>
+        </fieldsets>
+
+        <helpers>
+            <modulopagamento>
+                <class>Amanda_Pagamento_Helper</class>
+            </modulopagamento>
+        </helpers>
+
+        <blocks>
+            <modulopagamento>
+                <class>Amanda_Pagamento_Block</class>
+            </modulopagamento>
+        </blocks>
+
+        <models>
+            <modulopagamento>
+                <class>Amanda_Pagamento_Model</class>
+            </modulopagamento>
+        </models>
+    </global>
+
+    <default>
+        <payment>
+            <modulopagamento>
+                <active>1</active>
+                <model>modulopagamento/formapagamento</model>
+                <order_status>pending</order_status>
+                <title>PagLegal</title>
+                <allowspecific>0</allowspecific>
+                <payment_action>sale</payment_action>
+            </modulopagamento>
+        </payment>
+    </default>
+
+    <frontend>
+        <routers>
+            <modulopagamento>
+                <use>standard</use>
+                <args>
+                    <module>Amanda_Pagamento</module>
+                    <frontName>ModuloPagamento</frontName>
+                </args>
+            </modulopagamento>
+        </routers>
+    </frontend>
+
+
+</config>

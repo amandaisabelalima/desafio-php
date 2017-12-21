@@ -1,0 +1,18 @@
+a:5:{i:0;s:757:"Error in file: "C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Dataflow\sql\dataflow_setup\install-1.6.0.0.php" - SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'dataflow_session' already exists, query was: CREATE TABLE `dataflow_session` (
+  `session_id` int NOT NULL auto_increment COMMENT 'Session Id' ,
+  `user_id` int NOT NULL COMMENT 'User Id' ,
+  `created_date` timestamp NULL default NULL COMMENT 'Created Date' ,
+  `file` varchar(255) NULL COMMENT 'File' ,
+  `type` varchar(32) NULL COMMENT 'Type' ,
+  `direction` varchar(32) NULL COMMENT 'Direction' ,
+  `comment` varchar(255) NULL COMMENT 'Comment' ,
+  PRIMARY KEY (`session_id`)
+) COMMENT='Dataflow Session' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:1144:"#0 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.6.0.0')
+#2 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.6.0.0')
+#3 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\Users\amand\Documents\desafio-magento\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\Users\amand\Documents\desafio-magento\magento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

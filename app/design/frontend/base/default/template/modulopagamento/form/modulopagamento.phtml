@@ -1,0 +1,11 @@
+
+<div class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+    <div>
+        <label><?php echo $this->__('CPF') ?></label>
+        <span>
+            <input type="text" name="payment[campo_cpf]" maxlength="11"
+                   value="<?php echo $this->htmlEscape($this->getInfoData('campo_cpf')) ?>"/>
+        </span>
+    </div>
+</div>
+

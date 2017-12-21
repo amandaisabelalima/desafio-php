@@ -1,0 +1,21 @@
+a:5:{i:0;s:1073:"Error in file: "C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\sql\core_setup\upgrade-1.6.0.5-1.6.0.6.php" - SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'core_email_queue' already exists, query was: CREATE TABLE `core_email_queue` (
+  `message_id` int UNSIGNED NOT NULL auto_increment COMMENT 'Message Id' ,
+  `entity_id` int UNSIGNED NULL COMMENT 'Entity ID' ,
+  `entity_type` varchar(128) NULL COMMENT 'Entity Type' ,
+  `event_type` varchar(128) NULL COMMENT 'Event Type' ,
+  `message_body_hash` varchar(64) NOT NULL COMMENT 'Message Body Hash' ,
+  `message_body` mediumtext NOT NULL COMMENT 'Message Body' ,
+  `message_parameters` text NOT NULL COMMENT 'Message Parameters' ,
+  `created_at` timestamp NULL default NULL COMMENT 'Creation Time' ,
+  `processed_at` timestamp NULL default NULL COMMENT 'Finish Time' ,
+  PRIMARY KEY (`message_id`),
+  INDEX `0ADECE62FD629241C147389ADF20706E` (`entity_id`, `entity_type`, `event_type`, `message_body_hash`)
+) COMMENT='Email Queue' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:1162:"#0 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.6.0.4', '1.6.0.7')
+#2 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.6.0.4', '1.6.0.7')
+#3 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\Users\amand\Documents\desafio-magento\magento\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\Users\amand\Documents\desafio-magento\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\Users\amand\Documents\desafio-magento\magento\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}
